@@ -1,0 +1,11 @@
+azure-cosmos==4.3.0
+Faker
+matplotlib
+kivy==2.1.0
+kivymd==1.1.1
+pillow
+pydantic
+fastapi
+requests 
+beautifulsoup4
+uvicorn
