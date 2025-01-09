@@ -5,11 +5,7 @@ import os
 import requests
 import time
 
-# Path to ChromeDriver
-driver_path = "/usr/local/bin/chromedriver"  # Update this path if necessary
 
-# Initialize Service object
-service = Service(driver_path)
 
 # Initialize WebDriver with the Service object
 driver = webdriver.Firefox()
@@ -44,18 +40,12 @@ def download_and_rename_pdfs(pageCount):
 
         act_no = columns[1].text.strip()  # Act No
         
-        # This indicates its first row.
-        if act_no == "SR.NO" :
-            continue
-
         act_year = columns[2].text.strip()  # Act Year
-
 
         short_title = columns[3].text.strip().replace(" ", "_")  # Short Title (replace spaces with underscores)
 
 
         print("File data::", act_no, act_year, short_title)
-
 
 
         # Find the PDF link in the last column
