@@ -1,0 +1,9 @@
+Hi {{1}},  
+Exciting news! We’re offering a special discount on properties in {{2}}.  
+Discount: {{3}}  
+Offer valid until: {{4}}  
+
+Don't miss this opportunity! Reply "INTERESTED" to learn more.  
+
+Regards,  
+{{5}}  

@@ -1,11 +1,12 @@
 azure-cosmos==4.3.0
+azure.storage.blob
 Faker
 matplotlib
-kivy==2.1.0
-kivymd==1.1.1
 pillow
 pydantic
 fastapi
 requests 
 beautifulsoup4
 uvicorn
+kivy==2.1.0
+kivymd==1.1.1

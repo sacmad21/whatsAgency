@@ -1,0 +1,7 @@
+Hello {{1}},  
+Thank you for visiting the property at {{2}}.  
+We hope you found it interesting.  
+If you have any questions or need more information, feel free to contact us.  
+
+Looking forward to assisting you further,  
+{{3}}  

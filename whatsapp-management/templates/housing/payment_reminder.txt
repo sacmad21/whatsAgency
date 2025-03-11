@@ -1,0 +1,7 @@
+Dear {{1}},  
+This is a gentle reminder that your payment of {{2}} for the property at {{3}} is due on {{4}}.  
+
+Please let us know if you need assistance.  
+
+Warm regards,  
+{{5}}  

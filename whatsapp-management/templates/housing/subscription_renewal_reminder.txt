@@ -1,0 +1,6 @@
+Hi {{1}},  
+Your subscription for property updates is about to expire on {{2}}.  
+To continue receiving updates, please renew your subscription here: {{3}}  
+
+Warm regards,  
+{{4}}  

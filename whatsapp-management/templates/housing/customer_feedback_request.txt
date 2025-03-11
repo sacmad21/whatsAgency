@@ -1,0 +1,8 @@
+Hello {{1}},  
+Thank you for choosing {{2}} for your real estate needs.  
+We would appreciate your feedback on your experience.  
+
+Click here to leave your review: {{3}}  
+
+Best regards,  
+{{4}}  

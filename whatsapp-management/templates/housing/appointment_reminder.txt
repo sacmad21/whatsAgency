@@ -1,0 +1,10 @@
+Hi {{1}},  
+This is a reminder for your property viewing appointment.  
+Date: {{2}}  
+Time: {{3}}  
+Location: {{4}}  
+
+If you need to reschedule, please reply to this message.  
+
+Best regards,  
+{{5}}  

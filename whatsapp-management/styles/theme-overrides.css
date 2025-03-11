@@ -1,0 +1,22 @@
+/* styles/theme-overrides.css */
+
+/* Example of customizing .p-datatable for a more "Facebook" look */
+.p-datatable table {
+    border-color: #e1e1e1;
+  }
+  
+  .p-toolbar {
+    background-color: #4267B2; /* Facebook Blue */
+    color: #ffffff;
+  }
+  
+  .p-button {
+    background-color: #4267B2;
+    border-color: #4267B2;
+  }
+  
+  .p-button:hover {
+    background-color: #365899;
+    border-color: #365899;
+  }
+  

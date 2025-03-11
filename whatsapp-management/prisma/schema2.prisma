@@ -1,0 +1,305 @@
+// schema.prisma
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql" // Change to your DB provider: mysql, postgresql, sqlite, etc.
+  url      = env("DATABASE_URL")
+}
+
+
+// schema.prisma
+
+model PhoneNumber {
+  id                        Int                        @id @default(autoincrement())
+  phoneNumber               String                     @unique
+  status                    PhoneNumberStatus
+  createdAt                 DateTime                   @default(now())
+  updatedAt                 DateTime                   @updatedAt
+  messagesSent              Message[]                  @relation("SentMessages")
+  messagesReceived          Message[]                  @relation("ReceivedMessages")
+  twoStepVerificationStatus TwoStepVerificationStatus
+  groups                    Group[]                    @relation("GroupCreator")
+  conversations             Conversation[]
+  contacts                  Contact[]
+  twoStepVerifications      TwoStepVerification[]
+  groupParticipants         GroupParticipant[]         
+}
+
+
+model Media {
+  id                        Int                        @id @default(autoincrement())
+  mediaId                   String                     @unique
+  type                      MediaType
+  url                       String
+  fileName                  String
+  size                      Int
+  status                    MessageStatus
+  createdAt                 DateTime                   @default(now())
+  updatedAt                 DateTime                   @updatedAt
+  message                   Message[]
+}
+
+model Message {
+  id                        Int                        @id @default(autoincrement())
+  messageId                 String                     @unique
+  type                      MessageType
+  content                   String?
+  status                    MessageStatus
+  direction                 MessageDirection
+  templateId                Int?
+  template                  Template?                  @relation(fields: [templateId], references: [id])
+  mediaId                   Int?
+  media                     Media?                     @relation(fields: [mediaId], references: [id])
+  senderPhoneNumberId       Int
+  senderPhoneNumber         PhoneNumber                @relation("SentMessages", fields: [senderPhoneNumberId], references: [id])
+  recipientPhoneNumberId    Int
+  recipientPhoneNumber      PhoneNumber                @relation("ReceivedMessages", fields: [recipientPhoneNumberId], references: [id])
+  createdAt                 DateTime                   @default(now())
+  updatedAt                 DateTime                   @updatedAt
+}
+Z
+model Group {
+  id                        Int                        @id @default(autoincrement())
+  groupId                   String                     @unique
+  name                      String
+  description               String?
+  createdBy                 Int
+  creator                   PhoneNumber                @relation("GroupCreator", fields: [createdBy], references: [id])
+  participants              GroupParticipant[]
+  createdAt                 DateTime                   @default(now())
+  updatedAt                 DateTime                   @updatedAt
+}
+
+
+model GroupParticipant {
+  id                        Int                        @id @default(autoincrement())
+  groupId                   Int
+  group                     Group                      @relation(fields: [groupId], references: [id])
+  participantId             Int
+  participant               PhoneNumber                @relation(fields: [participantId], references: [id])
+  role                      GroupRole
+  joinedAt                  DateTime                   @default(now())
+}
+
+model Template {
+  id                        Int                        @id @default(autoincrement())
+  name                      String                     @unique
+  status                    TemplateStatus
+  category                  TemplateCategory
+  language                  TemplateLanguage
+  content                   String
+  createdAt                 DateTime                   @default(now())
+  updatedAt                 DateTime                   @updatedAt
+  messages                  Message[]
+}
+
+
+model Webhook {
+  id                        Int                        @id @default(autoincrement())
+  eventType                 WebhookEventType
+  callbackUrl               String
+  status                    String
+  createdAt                 DateTime                   @default(now())
+  updatedAt                 DateTime                   @updatedAt
+}
+
+model Conversation {
+  id                        Int                        @id @default(autoincrement())
+  phoneNumberId             Int
+  phoneNumber               PhoneNumber                @relation(fields: [phoneNumberId], references: [id])
+  conversationType          ConversationType
+  createdAt                 DateTime                   @default(now())
+  updatedAt                 DateTime                   @updatedAt
+}
+
+model ApplicationHealth {
+  id                        Int                        @id @default(autoincrement())
+  status                    ApplicationHealthStatus
+  checkedAt                 DateTime                   @default(now())
+}
+
+
+model Contact {
+  id                        Int                        @id @default(autoincrement())
+  phoneNumberId             Int
+  phoneNumber               PhoneNumber                @relation(fields: [phoneNumberId], references: [id])
+  
+  phoneverified             Boolean
+
+  email                     String
+  emailverfied              Boolean
+
+  facebookid                String
+  facebookverified          Boolean
+
+  instaid                   String
+  instaidverified           Boolean
+
+  xid                       String
+  xverified                 Boolean
+
+  name                      String
+  address                   String
+  conversationType          String
+  pincode                   String 
+  country                   String
+  
+  registered                Boolean
+  updatedAt                 DateTime                   @updatedAt
+}
+
+model Pricing {
+  id                        Int                        @id @default(autoincrement())
+  country                   CountryCode
+  conversationPrice         Float
+  messagePrice              Float
+  createdAt                 DateTime                   @default(now())
+}
+
+model TwoStepVerification {
+  id                        Int                        @id @default(autoincrement())
+  phoneNumberId             Int
+  phoneNumber               PhoneNumber                @relation(fields: [phoneNumberId], references: [id])
+  status                    TwoStepVerificationStatus
+  createdAt                 DateTime                   @default(now())
+}
+
+
+// schema.prisma
+
+// Enum for Message Types
+enum MessageType {
+  TEXT
+  IMAGE
+  VIDEO
+  AUDIO
+  DOCUMENT
+  LOCATION
+  CONTACT
+  STICKER
+  TEMPLATE
+  PRODUCT
+}
+
+// Enum for Media Types
+enum MediaType {
+  IMAGE
+  VIDEO
+  AUDIO
+  DOCUMENT
+  STICKER
+}
+
+// Enum for Message Status
+enum MessageStatus {
+  SENT
+  DELIVERED
+  READ
+  FAILED
+}
+
+// Enum for Message Direction
+enum MessageDirection {
+  INCOMING
+  OUTGOING
+}
+
+// Enum for Template Status
+enum TemplateStatus {
+  DRAFT
+  APPROVED
+  REJECTED
+  PENDING_APPROVAL
+}
+
+// Enum for Webhook Event Types
+enum WebhookEventType {
+  MESSAGE_RECEIVED
+  MESSAGE_STATUS
+  DELIVERY_REPORT
+  TEMPLATE_MESSAGE
+  ERROR
+  CONTACT_UPDATED
+}
+
+// Enum for Phone Number Status
+enum PhoneNumberStatus {
+  REGISTERED
+  UNREGISTERED
+  BLOCKED
+  PENDING
+}
+
+// Enum for Two-Step Verification Status
+enum TwoStepVerificationStatus {
+  ENABLED
+  DISABLED
+}
+
+// Enum for Group Roles
+enum GroupRole {
+  ADMIN
+  MEMBER
+}
+
+// Enum for Conversation Types
+enum ConversationType {
+  INCOMING
+  OUTGOING
+}
+
+// Enum for Message Template Categories
+enum TemplateCategory {
+  ACCOUNT_UPDATE
+  PAYMENT_UPDATE
+  SHIPPING_UPDATE
+  RESERVATION_UPDATE
+  ISSUE_RESOLUTION
+  TRANSACTIONAL
+  MARKETING
+  SOCIAL
+  OTP
+}
+
+// Enum for Message Priority Levels
+enum MessagePriority {
+  HIGH
+  MEDIUM
+  LOW
+}
+
+// Enum for Application Health Status
+enum ApplicationHealthStatus {
+  HEALTHY
+  UNHEALTHY
+  MAINTENANCE
+}
+
+// Enum for Country Codes (Example for India)
+enum CountryCode {
+  IN
+  US
+  GB
+  CA
+  AU
+  DE
+  FR
+  BR
+  ZA
+  PH
+}
+
+// Enum for Template Language
+enum TemplateLanguage {
+  ENGLISH
+  SPANISH
+  FRENCH
+  GERMAN
+  ITALIAN
+  PORTUGUESE
+  DUTCH
+  ARABIC
+  HINDI
+}

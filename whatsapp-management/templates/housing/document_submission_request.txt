@@ -1,0 +1,9 @@
+Hello {{1}},  
+We are processing your request for the property at {{2}}.  
+Please submit the following documents by {{3}}:  
+- {{4}}  
+
+Let us know if you have any questions.  
+
+Regards,  
+{{5}}  

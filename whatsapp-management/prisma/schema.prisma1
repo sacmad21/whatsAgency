@@ -1,0 +1,131 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql" // Change to your DB provider: mysql, postgresql, sqlite, etc.
+  url      = env("DATABASE_URL")
+}
+
+model User {  
+  id         Int        @id @default(autoincrement())
+  phoneNumber String     @unique
+  name        String?
+  optInStatus Boolean    @default(true)
+  createdAt   DateTime   @default(now())
+  updatedAt   DateTime   @updatedAt
+  
+  messages    Message[]
+  conversations Conversation[]
+}
+
+model Message {
+  id         Int        @id @default(autoincrement())
+  userId     Int
+  direction  Direction
+  messageType MessageType
+  content    String?
+  mediaId    Int?
+  templateId Int?
+  status     MessageStatus @default(sent)
+  createdAt  DateTime       @default(now())
+  updatedAt  DateTime       @updatedAt
+
+  user       User        @relation(fields: [userId], references: [id])
+  media      Media?      @relation(fields: [mediaId], references: [id])
+  template   Template?   @relation(fields: [templateId], references: [id])
+}
+
+model Media {
+  id         Int       @id @default(autoincrement())
+  mediaUrl   String
+  mediaType  MediaType
+  mediaSize  Int?
+  createdAt  DateTime  @default(now())
+
+  messages   Message[]
+}
+
+model Template {
+  id          Int       @id @default(autoincrement())
+  templateName String
+  languageCode String
+  templateBody String
+  status      TemplateStatus @default(pending)
+  createdAt   DateTime       @default(now())
+  updatedAt   DateTime       @updatedAt
+
+  messages    Message[]
+}
+
+model Webhook {
+  id         Int       @id @default(autoincrement())
+  eventType  String
+  payload    Json
+  receivedAt DateTime  @default(now())
+}
+
+
+model Conversation {
+  id               Int       @id @default(autoincrement())
+  userId           Int
+  conversationType ConversationType
+  startTime        DateTime  @default(now())
+  endTime          DateTime?
+  pricing          Decimal   @db.Decimal(10, 2)
+
+  user             User      @relation(fields: [userId], references: [id])
+}
+
+model Setting {
+  id           Int       @id @default(autoincrement())
+  settingName  String    @unique
+  settingValue String
+  updatedAt    DateTime  @updatedAt
+}
+
+model AuditLog {
+  id            Int       @id @default(autoincrement())
+  apiEndpoint   String
+  requestPayload Json
+  responsePayload Json?
+  statusCode    Int
+  createdAt     DateTime  @default(now())
+}
+
+enum Direction {
+  incoming
+  outgoing
+}
+
+enum MessageType {
+  text
+  media
+  template
+  interactive
+}
+
+enum MediaType {
+  image
+  video
+  document
+  audio
+}
+
+enum MessageStatus {
+  sent
+  delivered
+  read
+  failed
+}
+
+enum TemplateStatus {
+  approved
+  pending
+  rejected
+}
+
+enum ConversationType {
+  business_initiated
+  user_initiated
+}

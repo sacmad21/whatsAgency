@@ -1,0 +1,9 @@
+Hi {{1}},  
+We have an exciting new property listing in {{2}}!  
+Price: {{3}}  
+Details: {{4}}  
+
+Schedule a visit today! Reply "BOOK" to arrange a viewing.  
+
+Warm regards,  
+{{5}}  

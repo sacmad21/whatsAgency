@@ -1,0 +1,7 @@
+Hi {{1}},  
+The property at {{2}} is now available!  
+Price: {{3}}  
+To schedule a visit or reserve the property, reply "VISIT" or "RESERVE".  
+
+Best regards,  
+{{4}}  
