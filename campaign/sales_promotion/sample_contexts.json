@@ -1,0 +1,83 @@
+{
+    "furniture_d2c": {
+      "companyName": "UrbanNest Furniture",
+      "domain": "Home Furnishing D2C",
+      "businessModel": "Direct to Consumer (D2C)",
+      "background": "UrbanNest started in 2018, specializes in stylish affordable furniture for young urban families.",
+      "currentPain": "Low conversion rate in tier-2 cities despite strong web traffic.",
+      "goals": "Improve checkout rate, increase WhatsApp engagement, capture tier-2 audiences."
+    },
+    "electronics_d2c": {
+      "companyName": "VoltEdge Electronics",
+      "domain": "Consumer Electronics",
+      "businessModel": "Direct to Consumer (D2C)",
+      "background": "VoltEdge launched smart home devices in 2021 focusing on automation and IoT.",
+      "currentPain": "High cart abandonment after ad clicks.",
+      "goals": "Boost conversion rates, improve lead nurturing on WhatsApp."
+    },
+    "fmcg_brand": {
+      "companyName": "FreshBloom FMCG",
+      "domain": "Fast-Moving Consumer Goods",
+      "businessModel": "Omnichannel Retail",
+      "background": "FreshBloom offers organic daily essentials, partnered with top marketplaces.",
+      "currentPain": "Weak brand recall in Tier 1 metros.",
+      "goals": "Strengthen brand awareness via WhatsApp-first loyalty campaigns."
+    },
+    "real_estate": {
+      "companyName": "Skyline Realty",
+      "domain": "Real Estate",
+      "businessModel": "Residential Property Sales",
+      "background": "Skyline Realty develops luxury apartments in high-growth cities since 2005.",
+      "currentPain": "Low walk-ins after lead generation.",
+      "goals": "Improve site-visit confirmations using WhatsApp follow-ups."
+    },
+    "banking_credit_card": {
+      "companyName": "MetroBank Credit Cards",
+      "domain": "Banking & Financial Services",
+      "businessModel": "B2C Financial Products",
+      "background": "MetroBank offers premium and reward-driven credit cards targeting working professionals.",
+      "currentPain": "Low approval-to-activation ratio after signup.",
+      "goals": "Improve onboarding and KYC journey completion rates."
+    },
+    "edtech_startup": {
+      "companyName": "SkillWise Academy",
+      "domain": "Education Technology",
+      "businessModel": "B2C Subscription SaaS",
+      "background": "SkillWise provides industry-aligned upskilling courses for job seekers globally.",
+      "currentPain": "High dropout after free trial.",
+      "goals": "Convert free users to paid using progressive WhatsApp nudges."
+    },
+    "mobile_app_subscription": {
+      "companyName": "FitBuddy App",
+      "domain": "Health & Fitness App",
+      "businessModel": "Mobile Subscription App",
+      "background": "FitBuddy is a trending workout and diet planning app with gamified rewards.",
+      "currentPain": "Low renewal rates beyond 3 months.",
+      "goals": "Boost re-subscriptions using milestone-based WhatsApp campaigns."
+    },
+    "insurance_broker": {
+      "companyName": "SafeNest Insurance",
+      "domain": "Insurance Advisory",
+      "businessModel": "Broker + Aggregator",
+      "background": "SafeNest helps customers compare health, life, and auto insurance policies easily.",
+      "currentPain": "Lead drop-off after initial quote generation.",
+      "goals": "Automate personalized policy suggestions via WhatsApp."
+    },
+    "healthcare_clinic": {
+      "companyName": "Cura Healthcare",
+      "domain": "Healthcare Services",
+      "businessModel": "Clinic Chain",
+      "background": "Cura operates multi-specialty clinics focused on preventive care across metros.",
+      "currentPain": "No-shows for appointments after online booking.",
+      "goals": "Increase appointment confirmations and pre-visit education using WhatsApp."
+    },
+    "luxury_fashion_brand": {
+      "companyName": "Aurum Couture",
+      "domain": "Luxury Fashion Retail",
+      "businessModel": "Premium Direct Retail",
+      "background": "Aurum specializes in handcrafted couture apparel for elite customers.",
+      "currentPain": "Limited repeat purchases beyond first transaction.",
+      "goals": "Build long-term loyalty through personalized WhatsApp style advisory."
+    }
+  }
+  

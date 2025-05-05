@@ -1,0 +1,72 @@
+[
+    {
+      "stage": "Research and Objective Setting",
+      "goal": "Define the purpose and scope of the  ",
+      "actions": [
+        {"task": "Identify the Goal", "output": "CampaignObjective", "path": "actions.research.identify_campaign_goal"},
+        {"task": "Understand the Audience", "output": "TargetAudienceSegment", "path": " actions.research.understand_audience"},
+        {"task": "Analyze Competition", "output": "CompetitorStrategy", "path": " actions.research.analyze_competition"},
+        {"task": "Choose the Promotion Type", "output": "PromotionType", "path": " actions.research.choose_promotion_type"}
+      ]
+    },
+    {
+      "stage": "Campaign Planning",
+      "goal": "Design the mechanics and structure of the  ",
+      "actions": [
+        {"task": "Determine the Offer", "output": "CampaignOffer", "path": " actions.planning.determine_offer"},
+        {"task": "Set a Budget", "output": "CampaignBudget", "path": " actions.planning.set_budget"},
+        {"task": "Select Platforms", "output": "ChannelPlan", "path": " actions.planning.select_platforms"},
+        {"task": "Create a Timeline", "output": "CampaignTimeline", "path": " actions.planning.create_timeline"},
+        {"task": "Compliance Check", "output": "ComplianceChecklist", "path": " actions.planning.compliance_check"}
+      ]
+    },
+    {
+      "stage": "Content Creation and Design",
+      "goal": "Develop compelling promotional material to attract customers.",
+      "actions": [
+        {"task": "Write Promotional Messaging", "output": "PromotionalMessage", "path": " actions.creative.write_promotional_messaging"},
+        {"task": "Design Campaign Creatives", "output": "CreativeAsset", "path": " actions.creative.design_campaign_creatives"},
+        {"task": "Prepare Multimedia Assets", "output": "MediaAsset", "path": " actions.creative.prepare_multimedia_assets"},
+        {"task": "Build Content Calendar", "output": "ContentCalendar", "path": " actions.creative.build_content_calendar"}
+      ]
+    },
+    {
+      "stage": "Pre-Launch Phase",
+      "goal": "Build anticipation and ensure operational readiness for the campaign.",
+      "actions": [
+        {"task": "Create and Distribute Teasers", "output": "TeaserContent", "path": " actions.prelaunch.create_and_distribute_teasers"},
+        {"task": "Clean and Segment Contact Lists", "output": "CustomerSegmentList", "path": " actions.prelaunch.clean_and_segment_contacts"},
+        {"task": "Engage Influencers and Partners", "output": "InfluencerPlan", "path": " actions.prelaunch.engage_influencers_and_partners"},
+        {"task": "Test Campaign Systems", "output": "OperationalChecklist", "path": " actions.prelaunch.test_campaign_systems"}
+      ]
+    },
+    {
+      "stage": "Campaign Launch",
+      "goal": "Execute the campaign and drive customer action.",
+      "actions": [
+        {"task": "Activate Campaign on All Platforms", "output": "CampaignActivation", "path": " actions.launch.activate_campaign"},
+        {"task": "Enable Real-Time Customer Support", "output": "CustomerEngagementLog", "path": " actions.launch.enable_realtime_support"},
+        {"task": "Monitor Daily Performance Metrics", "output": "PerformanceReport", "path": " actions.launch.monitor_performance"}
+      ]
+    },
+    {
+      "stage": "Post-Launch Follow-Up",
+      "goal": "Sustain interest and convert leads into loyal customers.",
+      "actions": [
+        {"task": "Collect Customer Feedback", "output": "CustomerFeedback", "path": " actions.followup.collect_customer_feedback"},
+        {"task": "Send Thank You Messages", "output": "ThankYouMessage", "path": " actions.followup.send_thank_you_messages"},
+        {"task": "Retarget Interested Customers", "output": "RetargetingPlan", "path": " actions.followup.retarget_interested_customers"},
+        {"task": "Extend Campaign for Stock Clearance", "output": "CampaignExtensionPlan", "path": " actions.followup.extend_campaign_for_stock_clearance"}
+      ]
+    },
+    {
+      "stage": "Campaign Analysis",
+      "goal": "Evaluate the success of the campaign and identify areas for improvement.",
+      "actions": [
+        {"task": "Analyze Campaign Metrics", "output": "CampaignAnalysisReport", "path": " actions.analysis.analyze_campaign_metrics"},
+        {"task": "Document Key Learnings", "output": "CampaignLearnings", "path": " actions.analysis.document_key_learnings"},
+        {"task": "Prepare Internal Report", "output": "InternalCampaignReport", "path": " actions.analysis.prepare_internal_report"}
+      ]
+    }
+  ]
+  

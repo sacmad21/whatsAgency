@@ -1,0 +1,344 @@
+[
+    {
+      "stage": "Research and Objective Setting",
+      "goal": "Define the purpose and scope of the campaign.",
+      "actions": [
+        {
+          "task": "Identify the Goal",
+          "implementation_guidelines": "Determine the main reason for the campaign such as increasing short-term sales, clearing inventory, or customer acquisition/retention.",
+          "output": "CampaignObjective",
+          "raci": {
+            "responsible": ["marketing_manager"],
+            "accountable": "campaign_director",
+            "consulted": ["sales_head"],
+            "informed": ["CEO"]
+          }
+        },
+        {
+          "task": "Understand the Audience",
+          "implementation_guidelines": "Segment the audience based on demographics, interests, and purchase history to create targeted messages.",
+          "output": "TargetAudienceSegment",
+          "raci": {
+            "responsible": ["data_analyst"],
+            "accountable": "marketing_manager",
+            "consulted": ["crm_team"],
+            "informed": ["campaign_director"]
+          }
+        },
+        {
+          "task": "Analyze Competition",
+          "implementation_guidelines": "Study competitor promotions and positioning strategies to find differentiators.",
+          "output": "CompetitorStrategy",
+          "raci": {
+            "responsible": ["market_researcher"],
+            "accountable": "marketing_manager",
+            "consulted": ["brand_team"],
+            "informed": ["product_head"]
+          }
+        },
+        {
+          "task": "Choose the Promotion Type",
+          "implementation_guidelines": "Decide from discount types, flash deals, gifts, or loyalty rewards based on product fit and margin.",
+          "output": "PromotionType",
+          "raci": {
+            "responsible": ["campaign_planner"],
+            "accountable": "sales_head",
+            "consulted": ["finance_team"],
+            "informed": ["marketing_team"]
+          }
+        }
+      ]
+    },
+    {
+      "stage": "Campaign Planning",
+      "goal": "Design the mechanics and structure of the campaign.",
+      "actions": [
+        {
+          "task": "Determine the Offer",
+          "implementation_guidelines": "Craft compelling offers with clear limits (e.g. first 500 customers, limited time only).",
+          "output": "CampaignOffer",
+          "raci": {
+            "responsible": ["sales_team"],
+            "accountable": "sales_head",
+            "consulted": ["marketing_manager"],
+            "informed": ["customer_support"]
+          }
+        },
+        {
+          "task": "Set a Budget",
+          "implementation_guidelines": "Estimate the spend for media, creatives, incentives and logistics.",
+          "output": "CampaignBudget",
+          "raci": {
+            "responsible": ["finance_team"],
+            "accountable": "CFO",
+            "consulted": ["campaign_planner"],
+            "informed": ["CEO"]
+          }
+        },
+        {
+          "task": "Select Platforms",
+          "implementation_guidelines": "Choose channels like WhatsApp, social media, email and offline locations based on audience behavior.",
+          "output": "ChannelPlan",
+          "raci": {
+            "responsible": ["media_buyer"],
+            "accountable": "marketing_manager",
+            "consulted": ["creative_team"],
+            "informed": ["sales_team"]
+          }
+        },
+        {
+          "task": "Create a Timeline",
+          "implementation_guidelines": "Outline every major milestone and deadlines including content creation and testing.",
+          "output": "CampaignTimeline",
+          "raci": {
+            "responsible": ["project_manager"],
+            "accountable": "campaign_director",
+            "consulted": ["team_leads"],
+            "informed": ["marketing_team"]
+          }
+        },
+        {
+          "task": "Compliance Check",
+          "implementation_guidelines": "Ensure promotion adheres to all consumer protection laws and internal brand guidelines.",
+          "output": "ComplianceChecklist",
+          "raci": {
+            "responsible": ["legal_team"],
+            "accountable": "compliance_head",
+            "consulted": ["marketing_manager"],
+            "informed": ["campaign_director"]
+          }
+        }
+      ]
+    },
+  
+    {
+      "stage": "Content Creation and Design",
+      "goal": "Develop compelling promotional material to attract customers.",
+      "actions": [
+        {
+          "task": "Write Promotional Messaging",
+          "implementation_guidelines": "Create persuasive, concise copy that conveys urgency and value. Include variants tailored to different platforms.",
+          "output": "PromotionalMessage",
+          "raci": {
+            "responsible": ["copywriter"],
+            "accountable": "content_head",
+            "consulted": ["brand_manager"],
+            "informed": ["marketing_team"]
+          }
+        },
+        {
+          "task": "Design Campaign Creatives",
+          "implementation_guidelines": "Create banners, flyers, short videos, and platform-optimized visuals using brand guidelines.",
+          "output": "CreativeAsset",
+          "raci": {
+            "responsible": ["graphic_designer"],
+            "accountable": "creative_director",
+            "consulted": ["content_head"],
+            "informed": ["marketing_manager"]
+          }
+        },
+        {
+          "task": "Prepare Multimedia Assets",
+          "implementation_guidelines": "Develop infographics, gifs, or animated explainers to showcase the offer in engaging formats.",
+          "output": "MediaAsset",
+          "raci": {
+            "responsible": ["multimedia_team"],
+            "accountable": "creative_director",
+            "consulted": ["campaign_manager"],
+            "informed": ["social_media_team"]
+          }
+        },
+        {
+          "task": "Build Content Calendar",
+          "implementation_guidelines": "Create a schedule for release across all platforms, aligned with the campaign timeline and customer behavior.",
+          "output": "ContentCalendar",
+          "raci": {
+            "responsible": ["content_planner"],
+            "accountable": "content_head",
+            "consulted": ["media_buyer"],
+            "informed": ["marketing_director"]
+          }
+        }
+      ]
+    },
+    {
+      "stage": "Pre-Launch Phase",
+      "goal": "Build anticipation and ensure operational readiness for the campaign.",
+      "actions": [
+        {
+          "task": "Create and Distribute Teasers",
+          "implementation_guidelines": "Launch teaser messages across WhatsApp, social, and email with countdowns or mystery reveals.",
+          "output": "TeaserContent",
+          "raci": {
+            "responsible": ["social_media_team"],
+            "accountable": "campaign_manager",
+            "consulted": ["creative_team"],
+            "informed": ["customer_support"]
+          }
+        },
+        {
+          "task": "Clean and Segment Contact Lists",
+          "implementation_guidelines": "Remove inactive users, group by interest and behavior for targeting via CRM tools.",
+          "output": "CustomerSegmentList",
+          "raci": {
+            "responsible": ["crm_specialist"],
+            "accountable": "data_analyst",
+            "consulted": ["marketing_team"],
+            "informed": ["campaign_manager"]
+          }
+        },
+        {
+          "task": "Engage Influencers and Partners",
+          "implementation_guidelines": "Coordinate posts or stories with relevant creators and partners for cross-promotion.",
+          "output": "InfluencerPlan",
+          "raci": {
+            "responsible": ["influencer_manager"],
+            "accountable": "brand_manager",
+            "consulted": ["legal_team"],
+            "informed": ["campaign_director"]
+          }
+        },
+        {
+          "task": "Test Campaign Systems",
+          "implementation_guidelines": "Run checks on all technical systems like payment, hosting, chatbot, analytics, and customer support integrations.",
+          "output": "OperationalChecklist",
+          "raci": {
+            "responsible": ["qa_team"],
+            "accountable": "project_manager",
+            "consulted": ["tech_lead"],
+            "informed": ["campaign_manager"]
+          }
+        }
+      ]
+    },
+    {
+      "stage": "Campaign Launch",
+      "goal": "Execute the campaign and drive customer action.",
+      "actions": [
+        {
+          "task": "Activate Campaign on All Platforms",
+          "implementation_guidelines": "Broadcast messages on WhatsApp, emails, SMS, and paid ads. Ensure consistency and tracking.",
+          "output": "CampaignActivation",
+          "raci": {
+            "responsible": ["media_execution_team"],
+            "accountable": "marketing_manager",
+            "consulted": ["project_manager"],
+            "informed": ["sales_head"]
+          }
+        },
+        {
+          "task": "Enable Real-Time Customer Support",
+          "implementation_guidelines": "Use chatbots and support agents to resolve campaign-related queries and ensure smooth interactions.",
+          "output": "CustomerEngagementLog",
+          "raci": {
+            "responsible": ["support_team"],
+            "accountable": "customer_support_head",
+            "consulted": ["bot_team"],
+            "informed": ["campaign_manager"]
+          }
+        },
+        {
+          "task": "Monitor Daily Performance Metrics",
+          "implementation_guidelines": "Track impressions, clicks, conversions, and other KPIs daily. Flag anomalies and adapt strategies.",
+          "output": "PerformanceReport",
+          "raci": {
+            "responsible": ["analytics_team"],
+            "accountable": "data_head",
+            "consulted": ["marketing_manager"],
+            "informed": ["CEO"]
+          }
+        }
+      ]
+    },
+    
+    {
+      "stage": "Post-Launch Follow-Up",
+      "goal": "Sustain interest and convert leads into loyal customers.",
+      "actions": [
+        {
+          "task": "Collect Customer Feedback",
+          "implementation_guidelines": "Send feedback forms or WhatsApp messages to gather insights on customer satisfaction and campaign effectiveness.",
+          "output": "CustomerFeedback",
+          "raci": {
+            "responsible": ["support_team"],
+            "accountable": "customer_experience_manager",
+            "consulted": ["marketing_team"],
+            "informed": ["product_team"]
+          }
+        },
+        {
+          "task": "Send Thank You Messages",
+          "implementation_guidelines": "Use WhatsApp or email to thank participants and include a future offer to drive retention.",
+          "output": "ThankYouMessage",
+          "raci": {
+            "responsible": ["crm_specialist"],
+            "accountable": "marketing_manager",
+            "consulted": ["creative_team"],
+            "informed": ["campaign_director"]
+          }
+        },
+        {
+          "task": "Retarget Interested Customers",
+          "implementation_guidelines": "Identify customers who engaged but didn’t convert. Use WhatsApp or remarketing ads to bring them back.",
+          "output": "RetargetingPlan",
+          "raci": {
+            "responsible": ["media_team"],
+            "accountable": "crm_lead",
+            "consulted": ["analytics_team"],
+            "informed": ["campaign_manager"]
+          }
+        },
+        {
+          "task": "Extend Campaign for Stock Clearance",
+          "implementation_guidelines": "If applicable, run a limited extension of the offer to clear remaining inventory.",
+          "output": "CampaignExtensionPlan",
+          "raci": {
+            "responsible": ["sales_team"],
+            "accountable": "inventory_manager",
+            "consulted": ["finance_team"],
+            "informed": ["campaign_director"]
+          }
+        }
+      ]
+    },
+    {
+      "stage": "Campaign Analysis",
+      "goal": "Evaluate the success of the campaign and identify areas for improvement.",
+      "actions": [
+        {
+          "task": "Analyze Campaign Metrics",
+          "implementation_guidelines": "Evaluate uplift in sales, ROI, conversions, and customer engagement to determine campaign effectiveness.",
+          "output": "CampaignAnalysisReport",
+          "raci": {
+            "responsible": ["data_analyst"],
+            "accountable": "campaign_director",
+            "consulted": ["marketing_manager"],
+            "informed": ["CEO"]
+          }
+        },
+        {
+          "task": "Document Key Learnings",
+          "implementation_guidelines": "Summarize what worked well and what didn’t. Create a best practices document for future use.",
+          "output": "CampaignLearnings",
+          "raci": {
+            "responsible": ["project_manager"],
+            "accountable": "marketing_director",
+            "consulted": ["team_leads"],
+            "informed": ["future_campaign_teams"]
+          }
+        },
+        {
+          "task": "Prepare Internal Report",
+          "implementation_guidelines": "Draft a comprehensive campaign report for all internal stakeholders with graphs, metrics, and takeaways.",
+          "output": "InternalCampaignReport",
+          "raci": {
+            "responsible": ["reporting_team"],
+            "accountable": "campaign_director",
+            "consulted": ["analytics_team"],
+            "informed": ["executive_team"]
+          }
+        }
+      ]
+    }
+  ]
+  

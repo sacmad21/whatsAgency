@@ -1,0 +1,15 @@
+[
+    {
+      "stage": "Research and Objective Setting",
+      "goal": "Define the purpose and scope of the  ",
+      "actions": [
+
+        {"task": "Identify the Goal", "output": "CampaignObjective", "path": "actions.research.identify_campaign_goal"},
+        {"task": "Understand the Audience", "output": "TargetAudienceSegment", "path": "actions.research.understand_audience"},
+        {"task": "Analyze Competition", "output": "CompetitorStrategy", "path": "actions.research.analyze_competition"},
+        {"task": "Choose the Promotion Type", "output": "PromotionType", "path": "actions.research.choose_promotion_type"}
+      
+      ]
+    }
+  ]
+  

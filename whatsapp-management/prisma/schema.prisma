@@ -53,7 +53,9 @@ model Message {
   mediaId                   Int?
   media                     Media?                     @relation(fields: [mediaId], references: [id])
   senderPhoneNumberId       Int
+  senderPhoneNumber         PhoneNumber                @relation("SentMessages", fields: [senderPhoneNumberId], references: [id])
   recipientPhoneNumberId    Int
+  recipientPhoneNumber      PhoneNumber                @relation("ReceivedMessages", fields: [recipientPhoneNumberId], references: [id])
   createdAt                 DateTime                   @default(now())
   updatedAt                 DateTime                   @updatedAt
 }
